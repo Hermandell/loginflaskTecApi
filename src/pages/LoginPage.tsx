@@ -7,7 +7,7 @@ const LoginPage: React.FC = () => {
 
   const LogInUser = async () => {
     try {
-      const resp = await httpClient.post("http://127.0.0.1:5000/login", {
+      const resp = await httpClient.post("https://flaskapi-mu.vercel.app/login", {
         ncontrol,
         password,
       });

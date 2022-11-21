@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Usuario } from '../models/types';
+import { Usuario } from "../models/types";
 import httpClient from "./Services/httpClient";
 
 const LandingPage: React.FC = () => {
@@ -12,16 +12,6 @@ const LandingPage: React.FC = () => {
   };
 
   useEffect(() => {
-    // const loggedUser = window.localStorage.getItem("token");
-    // httpClient.get("https://flaskapi-mu.vercel.app/user", {
-    //   headers: {
-    //     Authorization: `Bearer ${loggedUser}`,
-    //   },
-    // })
-    // .then(response => response.data)
-    // .then(data=>console.log(data))
-    // .catch(err => console.log(err));
-
     (async () => {
       try {
         const loggedUser = window.localStorage.getItem("token");
@@ -49,24 +39,25 @@ const LandingPage: React.FC = () => {
   return (
     <>
       {user != null ? (
-        <>
+        <div>
           <h1>Bienvenido a la Aplication</h1>
           <br />
           <h1>Haz iniciado sesion</h1>
-          <h2>Usuario: {user.map((i:Usuario) => i.nombre)}</h2>
-          <h2>Estado: {user.map((i:Usuario) => i.estatus)}</h2>
+          <h2>Usuario: {user.map((i: Usuario) => i.nombre)}</h2>
+          <h2>Estado: {user.map((i: Usuario) => i.estatus)}</h2>
           <button type="button" onClick={salir}>
             Salir
           </button>
-        </>
+        </div>
       ) : (
         <div>
-          <a href="/login">
+          {/* <a href="/login">
             <button>Login</button>
           </a>
           <a href="/register">
             <button>Register</button>
-          </a>
+          </a> */}
+          Cargando...
         </div>
       )}
     </>

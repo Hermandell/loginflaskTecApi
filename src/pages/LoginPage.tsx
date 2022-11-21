@@ -21,11 +21,11 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <>
-      <h1>Log into Your Account</h1>
+    <div>
+      <h1>Inicia Sesion con tu cuenta Mindbox</h1>
       <form>
         <div>
-          <label>ncontrol:</label>
+          <label>No. Control:</label>
           <input
             type="text"
             value={ncontrol}
@@ -34,7 +34,7 @@ const LoginPage: React.FC = () => {
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label>Contraseña:</label>
           <input
             type="password"
             value={password}
@@ -46,7 +46,7 @@ const LoginPage: React.FC = () => {
           Submit
         </button>
       </form>
-    </>
+    </div>
   );
 };
 
